@@ -20,6 +20,7 @@ public class Date {
 	
 	public boolean isSameYear(Date miFecha) {
 		boolean retorno = false;
+		System.out.println("Opciones con if:");
 		
 		if (this.year==miFecha.year)
 			retorno=true;
@@ -38,17 +39,39 @@ public class Date {
 	
 	public boolean isSameDay(Date miFecha) {
 		boolean retorno = false;
-		
 		if (this.day==miFecha.day)
 			retorno=true;
 		
 		return retorno;
 	}
 	
-	/*isSameMonth
-	isSameDay
-	isSame*/
-
+	public boolean isSame(Date miFecha) {
+		boolean retorno = false;
+		if (this.day==miFecha.day && this.month==miFecha.month && this.year==miFecha.year);
+			retorno=true;
+		
+		return retorno;
+	}
+	
+	public boolean isSameYearNoif(Date miFecha) {
+			System.out.println("Opciones sin if:");
+			return (this.year==miFecha.year);
+	}
+	
+	public boolean isSameMonthNoif(Date miFecha) {
+			return (this.month==miFecha.month);
+	}
+	
+	
+	public boolean isSameDayNoif(Date miFecha) {
+			return (this.day==miFecha.day);
+	}
+	
+	public boolean isSameNoif(Date miFecha) {
+		return (this.day==miFecha.day && this.month==miFecha.month && this.year==miFecha.year);
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Date [day=" + day + ", month=" + month + ", year=" + year + "]";
