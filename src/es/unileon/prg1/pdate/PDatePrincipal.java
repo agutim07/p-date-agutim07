@@ -4,7 +4,7 @@ public class PDatePrincipal {
 	public static void main(String[] args)	{
 		
 		Date miFecha = new Date();
-		Date miFecha2 = new Date(1,11,2020);
+		Date miFecha2 = new Date(2,11,2020);
 		System.out.println(miFecha);
 		System.out.println(miFecha2);
 		
@@ -47,5 +47,18 @@ public class PDatePrincipal {
 			System.out.println("- Es la misma fecha");
 		else
 			System.out.println("- No es la misma fecha");
+		
+		miFecha2.getMonth();
+		
+		if(miFecha2.checkDay())
+			System.out.println("El día es incompatible");
+		else
+			System.out.println("El día es correcto");
+		
+		miFecha2.getSeason();
+		
+		System.out.println("Quedan "+miFecha2.daysLeft()+" meses para acabar el año");
+		
+		miFecha2.datesLeft();
 	}
 }
