@@ -4,7 +4,7 @@ public class PDatePrincipal {
 	public static void main(String[] args)	{
 		
 		Date miFecha = new Date();
-		Date miFecha2 = new Date(2,11,2020);
+		Date miFecha2 = new Date(20,5,2020);
 		System.out.println(miFecha);
 		System.out.println(miFecha2);
 		
@@ -59,6 +59,9 @@ public class PDatePrincipal {
 		
 		System.out.println("Quedan "+miFecha2.daysLeft()+" meses para acabar el año");
 		
+		System.out.println("Fechas hasta fin de mes:");
 		miFecha2.datesLeft();
+		
+		miFecha2.sameMonth();
 	}
 }

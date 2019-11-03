@@ -114,21 +114,28 @@ public class Date {
 	
 	void datesLeft() {
 		if (this.month==4 || this.month==6 || this.month==9 || this.month==11) {
-			for(int i=this.day; i<=30; i++) 
-				this.day=this.day+1;
-				System.out.println("- Date: "+(this.day)+"-"+this.month+"-"+this.year);
+			for(int i=this.day; i<=30; i++)
+				System.out.println("- Date: "+i+"-"+this.month+"-"+this.year);
 		}
 		if (this.month==1 || this.month==3 || this.month==5 || this.month==7 || this.month==8 || this.month==10 || this.month==12) {
 			for(int i=this.day; i<=31; i++) 
-				this.day=this.day+1;
-				System.out.println("- Date: "+(this.day)+"-"+this.month+"-"+this.year);
+				System.out.println("- Date: "+i+"-"+this.month+"-"+this.year);
 		}
 		if (this.month==2) {
-			for(int i=this.day; i<=28; i++) 
-				this.day=this.day+1;
-				System.out.println("- Date: "+(this.day)+"-"+this.month+"-"+this.year);
+			for(int i=this.day; i<=28; i++)
+				System.out.println("- Date: "+i+"-"+this.month+"-"+this.year);
 		}
 	}
+	
+	void sameMonth() {
+		if (this.month==4 || this.month==6 || this.month==9 || this.month==11) 
+			System.out.println("Meses con 30 días: Abril, Junio, Septiembre, Noviembre");
+		if (this.month==1 || this.month==3 || this.month==5 || this.month==7 || this.month==8 || this.month==10 || this.month==12) 
+			System.out.println("Meses con 31 días: Enero, Marzo, Mayo, Julio, Agosto, Octubre, Diciembre");
+		if (this.month==2)
+			System.out.println("Meses con 28 días: Febrero");
+		}
+		
 	
 	@Override
 	public String toString() {
