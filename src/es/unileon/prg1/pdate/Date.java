@@ -108,7 +108,7 @@ public class Date {
 			System.out.println("- Otoño");
 	}
 	
-	public int daysLeft() {
+	public int monthsLeft() {
 		return 12-this.month;	
 	}
 	
@@ -136,6 +136,20 @@ public class Date {
 			System.out.println("Meses con 28 días: Febrero");
 		}
 		
+	void daysCount() {
+		int x=this.day;
+		for (int i=this.month-1; i>=1; i--) {
+			if (i==11 || i==9 || i==6 || i==4)
+				x=x+30;
+			if (i==10 || i==8 || i==7 || i==5 || i==3 || i==1)
+				x=x+31;
+			if (i==2)
+				x=x+28;
+		}
+		System.out.println("Hasta esta fecha desde el incio de año han pasado "+x+" días");
+		
+		
+	}
 	
 	@Override
 	public String toString() {
