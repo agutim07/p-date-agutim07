@@ -4,7 +4,7 @@ public class PDatePrincipal {
 	public static void main(String[] args)	{
 		
 		Date miFecha = new Date();
-		Date miFecha2 = new Date(17,10,2020);
+		Date miFecha2 = new Date(6,8,2019);
 		System.out.println(miFecha);
 		System.out.println(miFecha2);
 		
@@ -67,5 +67,9 @@ public class PDatePrincipal {
 		miFecha2.daysCount();
 		
 		miFecha2.attempsWhile();
+		
+		miFecha2.attempsDoWhile();
+		
+		miFecha2.weekDay();
 	}
 }

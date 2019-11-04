@@ -161,6 +161,56 @@ public class Date {
 				break;
 			}
 		}	
+	}	
+	
+	void attempsDoWhile() {
+		int a=0;
+		System.out.println("Método do-while:");
+		do {
+			int dia=(int)(Math.random()*31+1);
+			int mes=(int)(Math.random()*12+1);
+			a=a+1;
+			if (this.day==dia && this.month==mes) {
+				System.out.println("- Se ha averiguado la fecha en el intento nº "+a);
+				break;
+			}
+		}while(true);	
+	}
+		
+	void weekDay() {
+		int x=this.day;
+		for (int i=this.month-1; i>=1; i--) {
+			if (i==11 || i==9 || i==6 || i==4)
+				x=x+30;
+			if (i==10 || i==8 || i==7 || i==5 || i==3 || i==1)
+				x=x+31;
+			if (i==2)
+				x=x+28;
+		}
+		while(true) {
+			x=x-7;
+			if (x==1) {
+				System.out.println("En 2019, este día es Martes");
+				break; }
+			if (x==2) {
+				System.out.println("En 2019, este día es Miércoles");
+				break; }
+			if (x==3) {
+				System.out.println("En 2019, este día es Jueves");
+				break; }
+			if (x==4) {
+				System.out.println("En 2019, este día es Viernes");
+				break; }
+			if (x==5) {
+				System.out.println("En 2019, este día es Sábado");
+				break; }
+			if (x==6) {
+				System.out.println("En 2019, este día es Domingo");
+				break; }
+			if (x==7) {
+				System.out.println("En 2019, este día es Lunes");
+				break; }
+		}
 	}
 	
 	
