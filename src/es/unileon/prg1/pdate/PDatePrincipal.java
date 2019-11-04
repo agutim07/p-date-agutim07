@@ -65,5 +65,7 @@ public class PDatePrincipal {
 		miFecha2.sameMonth();
 		
 		miFecha2.daysCount();
+		
+		miFecha2.attempsWhile();
 	}
 }

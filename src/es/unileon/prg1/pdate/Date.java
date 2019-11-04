@@ -147,9 +147,22 @@ public class Date {
 				x=x+28;
 		}
 		System.out.println("Hasta esta fecha desde el incio de año han pasado "+x+" días");
-		
-		
 	}
+	
+	void attempsWhile() {
+		int a=0;
+		System.out.println("Método while:");
+		while(true) {
+			int dia=(int)(Math.random()*31+1);
+			int mes=(int)(Math.random()*12+1);
+			a=a+1;
+			if (this.day==dia && this.month==mes) {
+				System.out.println("- Se ha averiguado la fecha en el intento nº "+a);
+				break;
+			}
+		}	
+	}
+	
 	
 	@Override
 	public String toString() {
